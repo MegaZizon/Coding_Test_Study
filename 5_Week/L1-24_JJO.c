@@ -27,14 +27,14 @@ int* solution(int numbers[], size_t numbers_len) {
 				continue;
 			}
 			
-			array[count][0]=numbers[i]+numbers[j];
+			array[count][0]=numbers[i]+numbers[j];  //Add the numbers of all cases and store them in an array
 			count++;
 		}
 	}
 	
 	/*for(i=0; i<20; i++){
 		for(j=0; j<2; j++){
-			printf("%d ",array[i][j]);
+			printf("%d ",array[i][j]);  //output format
 			
 		}
 		printf("%\n");
@@ -44,12 +44,12 @@ int* solution(int numbers[], size_t numbers_len) {
 	
 	for(i=0; i<size; i++){
 		if(array[i][1]==0){
-			answer_space[count]= array[i][0];
+			answer_space[count]= array[i][0];  //Save the first input
 			count++;
 		}
 		for(j=0; j<size; j++){
 			if(array[i][0]==array[j][0]){
-				array[j][1]=1;
+				array[j][1]=1;             //Set to 1 if the same number overlaps in the array because it was entered earlier
 			}
 		}
 	}
@@ -57,11 +57,11 @@ int* solution(int numbers[], size_t numbers_len) {
 	answer = (int*)malloc(sizeof(int*) * count);
 	
 	for(i=0; i<count; i++){
-		answer[i]=answer_space[i];
+		answer[i]=answer_space[i];                //copy to answer
 		//printf("%d ", answer[i]);
 	}
 	
-	for (i = 0; i < count-1; i++) {
+	for (i = 0; i < count-1; i++) {                  //Sort the values of answer
 		for (j = i + 1; j < count; j++) {
 	   		if (answer[i] >= answer[j]) {
 			    temp = answer[i];
