@@ -12,11 +12,11 @@ int* solution(int numbers[], size_t numbers_len) {
 	int temp;
     int size=numbers_len * (numbers_len-1);
 	
-	array= (int**)malloc(sizeof(int*) * size);
-	answer_space = (int*)malloc(sizeof(int*) * size); //Rows Space Allocation
+	array= (int**)malloc(sizeof(int*) * size);          //Rows Space Allocation (about the array)
+	answer_space = (int*)malloc(sizeof(int*) * size); 
 	
 	for(i=0; i<size; i++){
-    	array[i]=(int*) malloc ( sizeof(int) * 2);  //Cols Space Allocation
+    	array[i]=(int*) malloc ( sizeof(int) * 2);  //Cols Space Allocation (about the array)
     	array[i][1]=0;
 	}
 	
