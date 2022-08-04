@@ -13,10 +13,10 @@ int* solution(int numbers[], size_t numbers_len) {
     int size=numbers_len * (numbers_len-1);
 	
 	array= (int**)malloc(sizeof(int*) * size);
-	answer_space = (int*)malloc(sizeof(int*) * size);
+	answer_space = (int*)malloc(sizeof(int*) * size); //Rows Space Allocation
 	
 	for(i=0; i<size; i++){
-    	array[i]=(int*) malloc ( sizeof(int) * 2);
+    	array[i]=(int*) malloc ( sizeof(int) * 2);  //Cols Space Allocation
     	array[i][1]=0;
 	}
 	
